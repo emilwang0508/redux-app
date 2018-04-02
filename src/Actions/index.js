@@ -1,9 +1,12 @@
 import { ADD_TODO, REMOVE_TODO,TOGGLE_TODO,SET_VISIBILITY_FILTER } from './actionTypes'
 import VisibilityFilters from './visibility'
 
+let nextTodoId = 0
+
 function addTodo(text) {
     return {
         type:ADD_TODO,
+        id: nextTodoId++,
         text
     }
 }
